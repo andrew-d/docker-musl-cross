@@ -6,9 +6,11 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get upgrade -yy && \
     DEBIAN_FRONTEND=noninteractive apt-get install -yy \
         automake            \
+        bison               \
         build-essential     \
         curl                \
         file                \
+        flex                \
         git                 \
         pkg-config          \
         python              \
