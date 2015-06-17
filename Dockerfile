@@ -13,6 +13,7 @@ RUN apt-get update && \
         pkg-config          \
         python              \
         texinfo             \
+        vim                 \
         wget
 
 # Install musl-cross
