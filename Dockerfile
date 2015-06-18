@@ -31,4 +31,5 @@ RUN mkdir /build &&                                                 \
     apt-get clean &&                                                \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /build
 
+ENV PATH $PATH:/opt/cross/x86_64-linux-musl/bin
 CMD /bin/bash
