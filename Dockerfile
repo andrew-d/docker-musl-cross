@@ -19,13 +19,11 @@ RUN apt-get update && \
         wget
 
 # Install musl-cross
-ENV MUSL_VERSION 1.1.10
 RUN mkdir /build &&                                                 \
     cd /build &&                                                    \
     git clone https://github.com/GregorR/musl-cross.git &&          \
     cd musl-cross &&                                                \
     echo 'GCC_BUILTIN_PREREQS=yes' >> config.sh &&                  \
-    sed -i -e "s/^MUSL_VERSION=.*\$/MUSL_VERSION=$MUSL_VERSION/" defs.sh &&  \
     ./build.sh &&                                                   \
     cd / &&                                                         \
     apt-get clean &&                                                \
